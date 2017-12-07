@@ -6,7 +6,7 @@ var roleHarvester = {
         if(creep.carry.energy < creep.carryCapacity && !creep.memory.supplyMode) {
             //scanne den "Room" nach allen Energiequellen
             var sources = creep.room.find(FIND_SOURCES);
-            //Versuche die Energiequelle abzubauen, wenn das nicht klappt:
+            //Versuche die erste Energiequelle abzubauen, wenn das nicht klappt:
             if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
                 //fahre zu quelle
                 creep.moveTo(sources[0], {visualizePathStyle: {stroke: '#ffaa00'}});
